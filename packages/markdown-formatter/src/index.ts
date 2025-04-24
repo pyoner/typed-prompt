@@ -25,10 +25,7 @@ function toMarkdown(value: unknown, indent = 0): string {
     const entries = Object.entries(value as object);
     if (entries.length === 0) return '_empty object_';
     return entries
-      .map(
-        ([key, val]) =>
-          `${pad}- **${key}**: ${toMarkdown(val, indent + 1)}`
-      )
+      .map(([key, val]) => `${pad}- **${key}**: ${toMarkdown(val, indent + 1)}`)
       .join('\n');
   }
   return `\`${String(value)}\``;
