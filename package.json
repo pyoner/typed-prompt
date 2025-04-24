@@ -1,6 +1,9 @@
 {
   "name": "@typed-prompt/monorepo",
   "private": true,
+  "scripts": {
+    "format": "biome format --write ."
+  },
   "workspaces": [
     "apps/*",
     "packages/*"
