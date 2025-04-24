@@ -23,6 +23,16 @@
     "packages/json-formatter": {
       "name": "@typed-prompt/json-formatter",
       "devDependencies": {
+        "@typed-prompt/types": "workspace:*",
+        "@types/bun": "latest",
+      },
+      "peerDependencies": {
+        "typescript": "^5",
+      },
+    },
+    "packages/markdown-formatter": {
+      "name": "@typed-prompt/markdown-formatter",
+      "devDependencies": {
         "@types/bun": "latest",
       },
       "peerDependencies": {
@@ -44,6 +54,7 @@
         "jstoxml": "^7.0.1",
       },
       "devDependencies": {
+        "@typed-prompt/types": "workspace:*",
         "@types/bun": "latest",
         "@types/jstoxml": "^5.0.0",
       },
@@ -56,6 +67,8 @@
     "@typed-prompt/core": ["@typed-prompt/core@workspace:packages/core"],
 
     "@typed-prompt/json-formatter": ["@typed-prompt/json-formatter@workspace:packages/json-formatter"],
+
+    "@typed-prompt/markdown-formatter": ["@typed-prompt/markdown-formatter@workspace:packages/markdown-formatter"],
 
     "@typed-prompt/types": ["@typed-prompt/types@workspace:packages/types"],
 
