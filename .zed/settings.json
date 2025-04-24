@@ -1,0 +1,11 @@
+{
+  "format_on_save": "language_server",
+  "language_servers": ["biome"],
+  "lsp": {
+    "biome": {
+      "settings": {
+        "require_config_file": true
+      }
+    }
+  }
+}
