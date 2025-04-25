@@ -1,6 +1,10 @@
 {
-  "format_on_save": "language_server",
-  "language_servers": ["biome"],
+  "format_on_save": "on",
+  "formatter": {
+    "language_server": {
+      "name": "biome"
+    }
+  },
   "lsp": {
     "biome": {
       "settings": {
