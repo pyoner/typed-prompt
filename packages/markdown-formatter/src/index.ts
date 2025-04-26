@@ -1,21 +1,30 @@
 import type { Formatter } from '@typed-prompt/types';
 
-function toMarkdown(value: unknown, indent = 0): string {
-  const pad = '  '.repeat(indent);
+function toMarkdown(data: unknown, indent = 0): string {
+  let md = '';
+  const prefix = '  '.repeat(indent);
 
-  if (Array.isArray(value)) {
-    return value
-      .map((item) => `${pad}- ${toMarkdown(item, indent + 1)}`)
-      .join('\n');
+  if (Array.isArray(data)) {
+    data.forEach((item, index) => {
+      if (typeof item === 'object' && item !== null) {
+        md += `${prefix}- \n${toMarkdown(item, indent + 1)}`;
+      } else {
+        md += `${prefix}- ${item}\n`;
+      }
+    });
+  } else if (typeof data === 'object' && data !== null) {
+    for (const [key, value] of Object.entries(data)) {
+      if (typeof value === 'object' && value !== null) {
+        md += `${prefix}- **${key}**:\n${toMarkdown(value, indent + 1)}`;
+      } else {
+        md += `${prefix}- **${key}**: ${value}\n`;
+      }
+    }
+  } else {
+    md += `${prefix}${data}\n`;
   }
 
-  if (typeof value === 'object') {
-    return Object.entries(value)
-      .map(([key, val]) => `${pad}- **${key}**: ${toMarkdown(val, indent + 1)}`)
-      .join('\n');
-  }
-
-  return `${value}`;
+  return md;
 }
 
 export const markdownFormatter: Formatter = (obj) => {
