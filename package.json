@@ -4,7 +4,7 @@
   "scripts": {
     "format": "biome format --write ."
   },
-  "workspaces": ["apps/*", "packages/*"],
+  "workspaces": ["apps/*", "packages/**"],
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
     "@types/bun": "latest"

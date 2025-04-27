@@ -1,0 +1,15 @@
+{
+  "name": "demo",
+  "module": "src/index.ts",
+  "type": "module",
+  "private": true,
+  "dependencies": {
+    "@typed-prompt/json-formatter": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  }
+}
