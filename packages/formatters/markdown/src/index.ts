@@ -1,4 +1,4 @@
-import type { Format } from '@typed-prompt/types';
+import type { Format, Formatter } from '@typed-prompt/types';
 
 function toMarkdown(data: unknown, indent = 0): string {
   let md = '';
@@ -27,6 +27,12 @@ function toMarkdown(data: unknown, indent = 0): string {
   return md;
 }
 
-export const markdownFormatter: Format = (obj) => {
-  return `## Prompt\n\n${toMarkdown(obj)}`;
-};
+export class MarkdownFormatter implements Formatter {
+  constructor(readonly name: string = 'Prompt') {}
+  format(obj: unknown) {
+    return `## ${this.name}\n\n${toMarkdown(obj)}`;
+  }
+}
+
+export const markdownFormatter: Format = (obj) =>
+  new MarkdownFormatter().format(obj);
