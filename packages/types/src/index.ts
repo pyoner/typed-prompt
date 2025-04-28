@@ -1,6 +1,6 @@
 export type Prompt<V = unknown> = V;
-export type Format = <P extends Prompt>(obj: P) => string;
+export type Format<P extends Prompt = unknown> = (obj: P) => string;
 
-export interface Formatter {
-  format: Format;
+export interface Formatter<P extends Prompt = unknown> {
+  format: Format<P>;
 }
