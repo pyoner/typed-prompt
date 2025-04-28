@@ -12,6 +12,4 @@ export class XMLFormatter implements Formatter {
   }
 }
 
-export const xmlFormatter: Format = (obj) => {
-  return new XMLFormatter().format(obj);
-};
+export const xmlFormatter: Format = (obj) => new XMLFormatter().format(obj);
