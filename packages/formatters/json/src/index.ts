@@ -1,5 +1,5 @@
-import type { Formatter } from '@typed-prompt/types';
+import type { Format } from '@typed-prompt/types';
 
-export const jsonFormatter: Formatter = (obj) => {
+export const jsonFormatter: Format = (obj) => {
   return JSON.stringify({ prompt: obj }, null, 2);
 };

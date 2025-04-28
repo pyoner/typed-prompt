@@ -1,6 +1,6 @@
-import type { Formatter } from '@typed-prompt/types';
+import type { Format } from '@typed-prompt/types';
 import { toXML } from 'jstoxml';
 
-export const xmlFormatter: Formatter = (obj) => {
+export const xmlFormatter: Format = (obj) => {
   return toXML({ prompt: obj }, { indent: ' ' });
 };
