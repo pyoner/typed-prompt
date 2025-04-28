@@ -12,6 +12,5 @@ export class JSONFormatter implements Formatter {
 }
 
 export const jsonFormatter: Format = (obj) => {
-  const formatter = new JSONFormatter();
-  return formatter.format(obj);
+  return new JSONFormatter().format(obj);
 };
