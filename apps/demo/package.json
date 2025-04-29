@@ -4,6 +4,7 @@
   "type": "module",
   "private": true,
   "dependencies": {
+    "@typed-prompt/core": "workspace:*",
     "@typed-prompt/json-formatter": "workspace:*",
     "@typed-prompt/xml-formatter": "workspace:*",
     "@typed-prompt/markdown-formatter": "workspace:*"
