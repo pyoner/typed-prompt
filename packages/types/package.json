@@ -1,9 +1,14 @@
 {
   "name": "@typed-prompt/types",
-  "module": "src/index.ts",
+  "version": "0.1.0",
+  "description": "TypeScript types for the @typed-prompt ecosystem.",
   "type": "module",
+  "types": "./dist/index.d.ts",
   "exports": {
-    ".": "./src/index.ts"
+    ".": {
+      "development": "./src/index.ts",
+      "types": "./dist/index.d.ts"
+    }
   },
   "devDependencies": {
     "@types/bun": "latest"
