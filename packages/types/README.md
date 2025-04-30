@@ -1,15 +1,39 @@
 # @typed-prompt/types
 
-To install dependencies:
+TypeScript types for the `@typed-prompt` ecosystem.
 
-```bash
-bun install
+This package provides foundational type definitions for prompt abstractions, including generic prompt values, formatting functions, and formatter interfaces. It is intended for internal and ecosystem-wide consistency and type safety across `@typed-prompt` packages.
+
+---
+
+## Installation
+
+```sh
+npm install @typed-prompt/types
 ```
 
-To run:
+TypeScript ^5.x is required as a peer dependency.
 
-```bash
-bun run src/index.ts
-```
+---
 
-This project was created using `bun init` in bun v1.2.10. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
+## Exports
+
+- **Prompt**: a generic prompt value type.
+- **Format**: a function type for formatting prompt values.
+- **Formatter**: an interface for formatter implementations.
+
+Types are provided at `@typed-prompt/types`.
+
+---
+
+## Scripts
+
+- `build`: Generate type definitions using `tsdown`.
+
+---
+
+## License
+
+MIT
+
+---
