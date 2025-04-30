@@ -1,4 +1,4 @@
-import type { Prompt, Formatter, Format } from '@typed-prompt/types';
+import type { Format, Formatter, Prompt } from '@typed-prompt/types';
 
 export function prompt<P extends Prompt>(
   obj: P,

@@ -2,7 +2,9 @@
   "name": "@typed-prompt/monorepo",
   "private": true,
   "scripts": {
-    "format": "biome format --write ."
+    "check": "biome check --write .",
+    "format": "biome format --write .",
+    "lint": "biome lint ."
   },
   "workspaces": ["apps/*", "packages/**"],
   "devDependencies": {

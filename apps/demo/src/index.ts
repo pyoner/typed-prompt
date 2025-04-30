@@ -1,7 +1,7 @@
-import { jsonFormatter } from '@typed-prompt/json-formatter';
-import { xmlFormatter } from '@typed-prompt/xml-formatter';
-import { markdownFormatter } from '@typed-prompt/markdown-formatter';
 import { prompt } from '@typed-prompt/core';
+import { jsonFormatter } from '@typed-prompt/json-formatter';
+import { markdownFormatter } from '@typed-prompt/markdown-formatter';
+import { xmlFormatter } from '@typed-prompt/xml-formatter';
 
 const formatters = [jsonFormatter, xmlFormatter, markdownFormatter];
 const complexPrompt = {
