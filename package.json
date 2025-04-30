@@ -2,7 +2,8 @@
   "name": "@typed-prompt/monorepo",
   "private": true,
   "scripts": {
-    "check": "biome check --write .",
+    "check": "biome check .",
+    "check:fix": "biome check --write .",
     "format": "biome format --write .",
     "lint": "biome lint ."
   },
