@@ -18,5 +18,10 @@
   },
   "peerDependencies": {
     "typescript": "^5"
+  },
+  "author": { "name": "Askar Yusupov" },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pyoner/typed-prompt"
   }
 }
