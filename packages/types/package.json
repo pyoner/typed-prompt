@@ -2,6 +2,9 @@
   "name": "@typed-prompt/types",
   "version": "0.1.0",
   "description": "TypeScript types for the @typed-prompt ecosystem.",
+  "scripts": {
+    "build": "tsdown"
+  },
   "type": "module",
   "types": "./dist/index.d.ts",
   "exports": {
