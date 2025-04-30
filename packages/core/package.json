@@ -1,15 +1,29 @@
 {
   "name": "@typed-prompt/core",
-  "module": "src/index.ts",
-  "type": "module",
-  "exports": {
-    ".": "./src/index.ts"
+  "version": "0.1.0",
+  "description": "A core package for building strongly-typed, composable prompts in AI applications. Provides utilities and type definitions for reliable and flexible prompt engineering in TypeScript.",
+  "scripts": {
+    "build": "tsdown"
   },
+  "type": "module",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "development": "./src/index.ts",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": ["dist"],
   "devDependencies": {
     "@types/bun": "latest",
     "@typed-prompt/types": "workspace:*"
   },
   "peerDependencies": {
     "typescript": "^5"
+  },
+  "author": { "name": "Askar Yusupov" },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pyoner/typed-prompt"
   }
 }
