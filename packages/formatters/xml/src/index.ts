@@ -7,7 +7,7 @@ export class XMLFormatter implements Formatter {
     readonly indent: string = ' ',
   ) {}
 
-  format(obj: unknown) {
+  format(obj: unknown): string {
     return toXML({ [this.name]: obj }, { indent: this.indent });
   }
 }
