@@ -1,7 +1,7 @@
 {
   "name": "@typed-prompt/markdown-formatter",
   "version": "0.1.0",
-  "description": "A JSON formatter for the @typed-prompt ecosystem. Enables strongly-typed prompt values to be formatted as JSON strings for flexible serialization and integration with AI workflows.",
+  "description": "A Markdown formatter for the @typed-prompt ecosystem. Enables strongly-typed prompt values to be formatted as Markdown strings for flexible presentation and integration with AI workflows.",
   "scripts": {
     "build": "tsdown"
   },
