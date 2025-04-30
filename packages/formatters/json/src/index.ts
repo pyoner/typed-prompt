@@ -6,7 +6,7 @@ export class JSONFormatter implements Formatter {
     readonly spacer: string | number = 2,
   ) {}
 
-  format(obj: unknown) {
+  format(obj: unknown): string {
     return JSON.stringify({ [this.name]: obj }, null, this.spacer);
   }
 }
