@@ -13,6 +13,7 @@
       "types": "./dist/index.d.ts"
     }
   },
+  "files": ["dist/index.d.ts"],
   "devDependencies": {
     "@types/bun": "latest"
   },
