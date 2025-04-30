@@ -1,3 +1,6 @@
+
+---
+
 # @typed-prompt/types
 
 TypeScript types for the `@typed-prompt` ecosystem.
