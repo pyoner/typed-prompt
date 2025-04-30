@@ -29,7 +29,8 @@ function toMarkdown(data: unknown, indent = 0): string {
 
 export class MarkdownFormatter implements Formatter {
   constructor(readonly name: string = 'Prompt') {}
-  format(obj: unknown) {
+
+  format(obj: unknown): string {
     return `## ${this.name}\n\n${toMarkdown(obj)}`;
   }
 }

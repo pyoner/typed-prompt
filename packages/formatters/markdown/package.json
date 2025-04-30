@@ -1,15 +1,34 @@
 {
   "name": "@typed-prompt/markdown-formatter",
-  "module": "src/index.ts",
-  "type": "module",
-  "exports": {
-    ".": "./src/index.ts"
+  "version": "0.1.0",
+  "description": "A JSON formatter for the @typed-prompt ecosystem. Enables strongly-typed prompt values to be formatted as JSON strings for flexible serialization and integration with AI workflows.",
+  "scripts": {
+    "build": "tsdown"
   },
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "development": "./src/index.ts",
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": ["dist"],
   "devDependencies": {
     "@types/bun": "latest",
     "@typed-prompt/types": "workspace:*"
   },
   "peerDependencies": {
     "typescript": "^5"
+  },
+  "author": { "name": "Askar Yusupov" },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pyoner/typed-prompt"
   }
 }
