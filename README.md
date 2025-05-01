@@ -4,6 +4,9 @@ A set of modular TypeScript packages for composable, strongly-typed prompt engin
 
 This monorepo provides foundational types, core utilities, and flexible formatters for transforming prompt values into various serializations (JSON, Markdown, XML), designed for seamless integration and reliable workflows.
 
+## Why This Project Exists
+
+This project exists to provide a standardized, type-safe framework for managing and formatting prompts in AI applications. As the use of large language models continues to evolve, ensuring consistency and flexibility in prompt generation has become critical. The project addresses the challenges of interoperability among different formats—such as JSON, Markdown, and XML—each with its own benefits and token cost implications, while meeting the varying requirements of diverse LLMs. By offering a cohesive set of utilities and formatters, developers can effortlessly integrate robust prompt engineering into their workflows, optimize performance, and minimize unnecessary overhead, ultimately fostering greater reliability and expressiveness in AI-driven experiences.
 
 ## Packages
 
