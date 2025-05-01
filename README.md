@@ -111,6 +111,156 @@ for (const formatter of formatters) {
 
 ```
 
+
+## Output
+
+```sh
+--------------------
+jsonFormatter
+--------------------
+{
+  "prompt": {
+    "title": "Data Processing Wizard",
+    "instructions": [
+      "Analyze the input and return the structured version.",
+      "Highlight any inconsistencies you find.",
+      "Format your output according to the selected formatter."
+    ],
+    "inputs": {
+      "userData": {
+        "name": "string",
+        "age": "number",
+        "email": "string",
+        "interests": [
+          "string"
+        ]
+      },
+      "meta": {
+        "timestamp": "Date",
+        "source": "string",
+        "flags": [
+          "string"
+        ]
+      }
+    },
+    "outputs": [
+      {
+        "type": "success",
+        "description": "Structured data with formatter-specific syntax."
+      },
+      {
+        "type": "error",
+        "description": "Error object with reason for failure."
+      }
+    ],
+    "example": {
+      "userData": {
+        "name": "Alice Example",
+        "age": 34,
+        "email": "alice@example.com",
+        "interests": [
+          "reading",
+          "gardening"
+        ]
+      },
+      "meta": {
+        "timestamp": "2024-06-22T20:00:00Z",
+        "source": "test-suite",
+        "flags": []
+      }
+    }
+  }
+}
+--------------------
+
+--------------------
+xmlFormatter
+--------------------
+<prompt>
+ <title>Data Processing Wizard</title>
+ <instructions>Analyze the input and return the structured version.</instructions>
+ <instructions>Highlight any inconsistencies you find.</instructions>
+ <instructions>Format your output according to the selected formatter.</instructions>
+ <inputs>
+  <userData>
+   <name>string</name>
+   <age>number</age>
+   <email>string</email>
+   <interests>string</interests>
+  </userData>
+  <meta>
+   <timestamp>Date</timestamp>
+   <source>string</source>
+   <flags>string</flags>
+  </meta>
+ </inputs>
+ <outputs>
+  <type>success</type>
+  <description>Structured data with formatter-specific syntax.</description>
+  <type>error</type>
+  <description>Error object with reason for failure.</description>
+ </outputs>
+ <example>
+  <userData>
+   <name>Alice Example</name>
+   <age>34</age>
+   <email>alice@example.com</email>
+   <interests>reading</interests>
+   <interests>gardening</interests>
+  </userData>
+  <meta>
+   <timestamp>2024-06-22T20:00:00Z</timestamp>
+   <source>test-suite</source>
+  </meta>
+ </example>
+</prompt>
+--------------------
+
+--------------------
+markdownFormatter
+--------------------
+## Prompt
+
+- **title**: Data Processing Wizard
+- **instructions**:
+  - Analyze the input and return the structured version.
+  - Highlight any inconsistencies you find.
+  - Format your output according to the selected formatter.
+- **inputs**:
+  - **userData**:
+    - **name**: string
+    - **age**: number
+    - **email**: string
+    - **interests**:
+      - string
+  - **meta**:
+    - **timestamp**: Date
+    - **source**: string
+    - **flags**:
+      - string
+- **outputs**:
+  -
+    - **type**: success
+    - **description**: Structured data with formatter-specific syntax.
+  -
+    - **type**: error
+    - **description**: Error object with reason for failure.
+- **example**:
+  - **userData**:
+    - **name**: Alice Example
+    - **age**: 34
+    - **email**: alice@example.com
+    - **interests**:
+      - reading
+      - gardening
+  - **meta**:
+    - **timestamp**: 2024-06-22T20:00:00Z
+    - **source**: test-suite
+    - **flags**:
+
+--------------------
+```
+
 ## Requirements
 
 - TypeScript ^5.x
