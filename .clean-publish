@@ -1,0 +1,6 @@
+{
+  "withoutPublish": true,
+  "tempDir": "package",
+  "packageManager": "bun",
+  "fields": ["exports.\\..development"]
+}

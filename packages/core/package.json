@@ -2,7 +2,13 @@
   "name": "@typed-prompt/core",
   "version": "0.1.1",
   "description": "A core package for building strongly-typed, composable prompts in AI applications. Provides utilities and type definitions for reliable and flexible prompt engineering in TypeScript.",
+  "publishConfig": {
+    "access": "public",
+    "directory": "package"
+  },
   "scripts": {
+    "prepublishOnly": "rm -rf ./package && bun run clean-publish",
+    "postpublish": "rm -rf ./package",
     "build": "tsdown"
   },
   "type": "module",
