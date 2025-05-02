@@ -7,7 +7,7 @@
     "directory": "package"
   },
   "scripts": {
-    "prepublishOnly": "bun run clear-package-json package.json",
+    "prepublishOnly": "bun run clear-package-json package.json -o package.json",
     "postpublish": "git restore .",
     "build": "tsdown"
   },
