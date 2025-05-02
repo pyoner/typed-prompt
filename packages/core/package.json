@@ -6,8 +6,9 @@
     "access": "public"
   },
   "scripts": {
-    "prepublishOnly": "bun run clear-package-json package.json -o package.json",
-    "postpublish": "git restore .",
+    "publish": "bun pm pack --filename ./package.tgz && bun publish ./package.tgz",
+    "prepack": "bun run clear-package-json package.json -o package.json",
+    "postpack": "git restore .",
     "build": "tsdown"
   },
   "type": "module",
