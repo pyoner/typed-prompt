@@ -1,13 +1,14 @@
 {
   "name": "@typed-prompt/markdown-formatter",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A Markdown formatter for the @typed-prompt ecosystem. Enables strongly-typed prompt values to be formatted as Markdown strings for flexible presentation and integration with AI workflows.",
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
-    "prepublishOnly": "bun run clear-package-json package.json -o package.json",
-    "postpublish": "git restore .",
+    "publish": "bun run clear-pkg-json && bun pm pack --filename ./package.tgz && bun publish ./package.tgz",
+    "clear-pkg-json": "bun run clear-package-json package.json -o package.json",
+    "postpack": "git restore .",
     "build": "tsdown"
   },
   "type": "module",
