@@ -3,8 +3,7 @@
   "version": "0.1.2",
   "description": "A core package for building strongly-typed, composable prompts in AI applications. Provides utilities and type definitions for reliable and flexible prompt engineering in TypeScript.",
   "publishConfig": {
-    "access": "public",
-    "directory": "package"
+    "access": "public"
   },
   "scripts": {
     "prepublishOnly": "bun run clear-package-json package.json -o package.json",
