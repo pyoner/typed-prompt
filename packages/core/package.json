@@ -7,8 +7,8 @@
     "directory": "package"
   },
   "scripts": {
-    "prepublishOnly": "rm -rf ./package && bun run clean-publish",
-    "postpublish": "rm -rf ./package",
+    "prepublishOnly": "bun run clean-package-json",
+    "postpublish": "git restore .",
     "build": "tsdown"
   },
   "type": "module",
