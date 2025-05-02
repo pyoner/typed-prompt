@@ -1,13 +1,14 @@
 {
   "name": "@typed-prompt/types",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "TypeScript types for the @typed-prompt ecosystem.",
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
-    "prepublishOnly": "bun run clear-package-json package.json -o package.json",
-    "postpublish": "git restore .",
+    "publish": "bun run clear-pkg-json && bun pm pack --filename ./package.tgz && bun publish ./package.tgz",
+    "clear-pkg-json": "bun run clear-package-json package.json -o package.json",
+    "postpack": "git restore .",
     "build": "tsdown"
   },
   "type": "module",
