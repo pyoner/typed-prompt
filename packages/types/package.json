@@ -1,8 +1,13 @@
 {
   "name": "@typed-prompt/types",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "TypeScript types for the @typed-prompt ecosystem.",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
+    "prepublishOnly": "bun run clear-package-json package.json -o package.json",
+    "postpublish": "git restore .",
     "build": "tsdown"
   },
   "type": "module",
