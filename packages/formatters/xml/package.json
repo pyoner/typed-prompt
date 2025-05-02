@@ -1,8 +1,13 @@
 {
   "name": "@typed-prompt/xml-formatter",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A XML formatter for the @typed-prompt ecosystem. Enables strongly-typed prompt values to be formatted as XML strings for flexible presentation and integration with AI workflows.",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
+    "prepublishOnly": "bun run clear-package-json package.json -o package.json",
+    "postpublish": "git restore .",
     "build": "tsdown"
   },
   "type": "module",
